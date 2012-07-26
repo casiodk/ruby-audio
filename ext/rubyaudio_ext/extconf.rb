@@ -12,8 +12,8 @@ else
   sndfile_lib = 'sndfile'
 end
 
-INCLUDE_DIRS = [Rails.root + 'vendor/libsnd/include', '/opt/local/include', '/usr/local/include', 'C:/Program Files (x86)/Mega-Nerd/libsndfile/include', 'C:/Program Files/Mega-Nerd/libsndfile/include']
-LIB_DIRS = [Rails.root + 'vendor/libsnd/bin', '/opt/local/lib', '/usr/local/lib', 'C:/Program Files (x86)/Mega-Nerd/libsndfile/bin', 'C:/Program Files/Mega-Nerd/libsndfile/bin']
+INCLUDE_DIRS = ['/vendor/libsnd/include', '/opt/local/include', '/usr/local/include', 'C:/Program Files (x86)/Mega-Nerd/libsndfile/include', 'C:/Program Files/Mega-Nerd/libsndfile/include']
+LIB_DIRS = ['/vendor/libsnd/bin', '/opt/local/lib', '/usr/local/lib', 'C:/Program Files (x86)/Mega-Nerd/libsndfile/bin', 'C:/Program Files/Mega-Nerd/libsndfile/bin']
 
 # libsndfile requirements
 find_header 'sndfile.h', *INCLUDE_DIRS
