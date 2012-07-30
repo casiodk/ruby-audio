@@ -16,7 +16,7 @@ INCLUDE_DIRS = ['vendor/libsnd/include', '/opt/local/include', '/usr/local/inclu
 LIB_DIRS = ['vendor/libsnd/bin', '/opt/local/lib', '/usr/local/lib', 'C:/Program Files (x86)/Mega-Nerd/libsndfile/bin', 'C:/Program Files/Mega-Nerd/libsndfile/bin']
 
 # libsndfile requirements
-find_header 'sndfile.h', *INCLUDE_DIRS
+find_header Rails.root.join("/vendor/libsnd/include/sndfile.h")#*INCLUDE_DIRS
 unless ['sndfile-1', 'sndfile'].any? {|lib| find_library lib, 'sf_open', *LIB_DIRS}
   fail <<-EOM
   Can't find libsndfile (http://www.mega-nerd.com/libsndfile/)
